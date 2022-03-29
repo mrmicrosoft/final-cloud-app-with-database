@@ -1,1 +1,1 @@
-# final-cloud-app-with-database
+# IBM Cloud based App using Django
