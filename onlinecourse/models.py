@@ -129,7 +129,7 @@ class Choice(models.Model):
     # Foreign key to lesson
     question = models.ForeignKey(Question, null=True, on_delete=models.CASCADE)
     choice = models.TextField()
-    grade = models.FloatField(default=0.0)
+    correct = models.BooleanField(default=False)
 
 # <HINT> The submission model
 # One enrollment could have multiple submission
