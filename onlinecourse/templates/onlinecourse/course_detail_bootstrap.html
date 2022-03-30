@@ -67,11 +67,13 @@
             <!-- <HINT> For each question choice, you may create a checkbox input like
             <input type="check" name="choice_{{choice.id}}" id="{{choice.id}}" ...>
             -->
-            <a data-toggle="collapse" href="#form_holder" aria-expanded="false" style="margin-top:8px;">Take Exams</a>
+            <button class="btn btn-primary" role="button" data-toggle="collapse" data-target="form_holder" aria-controls="form_holder" aria-expanded="true" style="margin-top:8px;">
+                Take Exams
+            </button>
 
             <!-- A choice submission form example -->
-            <div id="form_holder" class="collapse in">
-                <form id="questionform" class="collapse in" action="{% url 'onlinecourse:submit' %}" method="post">
+            <div id="form_holder" class="colapse in">
+                <form id="questionform" action="{% url 'onlinecourse:submit' %}" method="post">
                     <!-- ... for each question in the course ... -->
                     {% for question in course.question_set.all %}
                         <div class="card mt-1">
