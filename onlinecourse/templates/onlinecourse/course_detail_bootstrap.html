@@ -73,7 +73,7 @@
 
             <!-- A choice submission form example -->
             <div id="form_holder" class="colapse in">
-                <form id="questionform" action="{% url 'onlinecourse:submit' %}" method="post">
+                <form id="questionform" action="{% url 'onlinecourse:submit' course.id %}" method="post">
                     <!-- ... for each question in the course ... -->
                     {% for question in course.question_set.all %}
                         <div class="card mt-1">
@@ -92,8 +92,8 @@
                                 {% endfor %}
                             </div>
                         </div>
-                        <input class="btn btn-success btn-block" type="submit" value="Submit">
                     {% endfor %}
+                    <input class="btn btn-success btn-block" type="submit" value="Submit">
                 </form>
             </div>
 
